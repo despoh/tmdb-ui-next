@@ -10,7 +10,7 @@ export const searchMovie = async (keyword: string, pageNumber: number) => {
   };
 
   const data = await request<SearchQuery>(
-    "http://tmdb.despoh.com/api",
+    "https://tmdb.despoh.com/api",
     searchQuery,
     variable,
   );
@@ -25,7 +25,7 @@ export const searchTV = async (keyword: string, pageNumber: number) => {
   };
 
   const data = await request<SearchQuery>(
-    "http://tmdb.despoh.com/api",
+    "https://tmdb.despoh.com/api",
     searchQuery,
     variable,
   );

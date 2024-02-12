@@ -8,7 +8,7 @@ export const getTrendingMedia = async (timeWindow: String) => {
   };
 
   const data = await request<TrendingMediaQuery>(
-    "http://tmdb.despoh.com/api",
+    "https://tmdb.despoh.com/api",
     trendingMediaQuery,
     variable,
   );
@@ -21,7 +21,7 @@ export const getPopularMedia = async (type: String) => {
   };
 
   const data = await request<PopularMediaQuery>(
-    "http://tmdb.despoh.com/api",
+    "https://tmdb.despoh.com/api",
     popularMediaQuery,
     variable,
   );

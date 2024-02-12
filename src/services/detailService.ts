@@ -8,7 +8,7 @@ export const getMovieDetail = async (id: number) => {
   };
 
   const data = await request<MovieDetailQuery>(
-    "http://tmdb.despoh.com/api",
+    "https://tmdb.despoh.com/api",
     movieDetailQuery,
     variable,
   );
@@ -21,7 +21,7 @@ export const getTvDetail = async (id: number) => {
   };
 
   const data = await request<TvDetailQuery>(
-    "http://tmdb.despoh.com/api",
+    "https://tmdb.despoh.com/api",
     tvDetailQuery,
     variable,
   );
