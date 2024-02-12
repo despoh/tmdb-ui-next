@@ -1,0 +1,97 @@
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 30px 40px;
+  flex-direction: column;
+}
+
+.carouselContainer {
+  position: relative;
+  &::after {
+    background-image: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0) 0,
+      #fff 100%
+    );
+    z-index: 10;
+    width: 60px;
+    height: 100%;
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+  }
+}
+
+.wrapper {
+  max-width: 1400px;
+}
+
+.leftColumn {
+  width: 100%;
+}
+
+.rightColumn {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.h3 {
+  font-weight: 600;
+  font-size: 1.4em;
+  margin-bottom: 20px;
+}
+
+.rightColumnItem {
+  margin-top: 20px;
+}
+
+.badge {
+  margin-right: 5px;
+  margin-bottom: 10px;
+  padding: 4px 10px;
+  white-space: nowrap;
+  background-color: rgba(0, 0, 0, 0.1);
+  list-style: none;
+  display: inline-block;
+  font-size: 0.9em;
+  border: 1px solid #d7d7d7;
+  border-radius: 5px;
+}
+
+.h4 {
+  font-weight: 500;
+}
+
+.keywords {
+  font-size: 1.1em;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.factValue {
+  height: 30px;
+
+  img {
+    height: 100%;
+  }
+}
+
+@include breakpoint("lg") {
+  .container {
+    flex-direction: row;
+  }
+
+  .leftColumn {
+    width: calc(100vw - 80px - 268px);
+    max-width: calc(1400px - 80px - 268px);
+    padding-right: 30px;
+  }
+
+  .rightColumn {
+    min-width: 260px;
+    width: 260px;
+  }
+}

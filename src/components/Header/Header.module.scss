@@ -1,0 +1,123 @@
+.container {
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: left calc((50vw - 170px) - 340px) top;
+}
+
+.facts {
+  margin-bottom: 24px;
+  font-size: 16px;
+}
+
+.customBg {
+  width: 100%;
+  background-image: linear-gradient(
+    to right,
+    rgb(217, 217, 226) calc((50vw - 170px) - 340px),
+    rgba(168, 168, 171, 0.786) 50%,
+    rgba(99, 99, 102, 0.715) 100%
+  );
+  display: flex;
+  justify-content: center;
+}
+
+.wrapper {
+  display: flex;
+  padding: 30px 40px;
+  align-items: center;
+  width: 100%;
+  max-width: 1400px;
+  flex-direction: column;
+}
+
+.poster {
+  width: 300px;
+  min-width: 300px;
+  height: 450px;
+  overflow: hidden;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #dbdbdb;
+  img {
+    width: 100%;
+  }
+}
+
+.noPoster {
+  img {
+    width: 50%;
+  }
+}
+
+.title {
+  font-size: 2.2rem;
+  font-weight: 600;
+  display: inline-block;
+}
+
+.releaseYear {
+  // display: inline-block;
+  font-weight: 400;
+  opacity: 0.8;
+  margin-left: 8px;
+}
+
+.tagline {
+  font-style: italic;
+  opacity: 0.7;
+  font-size: 1.1em;
+  font-weight: 400;
+  margin-top: 24px;
+}
+
+.overviewLabel {
+  margin: 10px 0;
+  font-weight: 500;
+  font-size: 1.3em;
+}
+
+.prependDot:not(:first-child) {
+  position: relative;
+  padding-left: 20px;
+  &::before {
+    content: "•";
+    width: 100%;
+    font-size: 1.1em;
+    position: absolute;
+    left: 7px;
+    top: 0px;
+  }
+}
+
+.infoContainer {
+  margin-top: 30px;
+}
+
+.directorsContainer {
+  display: flex;
+  list-style: none;
+  margin-top: 20px;
+  width: 100%;
+
+  li {
+    flex-basis: 33%;
+  }
+}
+
+.director {
+  font-weight: 600;
+}
+
+@include breakpoint("lg") {
+  .wrapper {
+    flex-direction: row;
+  }
+
+  .infoContainer {
+    margin-top: unset;
+    padding-left: 40px;
+  }
+}

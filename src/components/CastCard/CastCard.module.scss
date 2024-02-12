@@ -1,0 +1,32 @@
+.container {
+  margin: 10px 4px 10px 10px;
+  border: 1px solid rgb(227, 227, 227);
+  border-radius: 8px;
+  min-width: 140px;
+  width: 140px;
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.imageContainer {
+  min-width: 138px;
+  min-height: 207px;
+  background-color: #dbdbdb;
+  display: flex;
+  justify-content: center;
+  img {
+    width: 100%;
+  }
+}
+
+.character {
+  font-size: 0.9em;
+  font-weight: 400;
+  opacity: 0.7;
+}
+
+.infoContainer {
+  font-weight: 600;
+  padding: 10px;
+}

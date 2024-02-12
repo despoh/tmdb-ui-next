@@ -1,0 +1,34 @@
+.container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  position: relative;
+}
+
+.input {
+  width: 100%;
+  height: 46px;
+  border: none;
+  border-radius: 30px;
+  outline: none;
+  margin-top: 30px;
+  padding: 10px 20px;
+  font-size: 1.1em;
+}
+
+.button {
+  padding: 10px 26px;
+  height: 46px;
+  border: 0;
+  background: linear-gradient(
+    to right,
+    rgba(30, 213, 16, 1) 0%,
+    rgba(1, 180, 228, 1) 100%
+  );
+  border-radius: 30px;
+  position: absolute;
+  right: -1px;
+  bottom: 0;
+  color: #fff;
+  font-weight: 600;
+}

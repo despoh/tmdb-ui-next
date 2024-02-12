@@ -1,0 +1,28 @@
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.numberContainer {
+  padding: 2px 4px;
+  margin-right: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.active {
+  padding: 2px 8px;
+  border: 1px solid black;
+  font-weight: 500;
+}
+
+.next {
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.prev {
+  margin-right: 10px;
+  cursor: pointer;
+}

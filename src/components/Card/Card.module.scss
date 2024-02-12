@@ -1,0 +1,48 @@
+.container {
+  width: 150px;
+  min-width: 150px;
+  margin-right: 20px;
+  position: relative;
+  z-index: 5;
+  cursor: pointer;
+}
+
+.image {
+  height: calc(150px * 1.5);
+  background: black;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+  }
+}
+
+.h2 {
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.ring {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  position: absolute;
+  top: -19px;
+  left: 10px;
+  background: rgb(159, 157, 157);
+  font-size: 0.6em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contentWrapper {
+  position: relative;
+  padding: 26px 10px 12px;
+}
+
+.releaseDate {
+  color: rgba(0, 0, 0, 0.6);
+}

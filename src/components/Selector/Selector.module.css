@@ -1,0 +1,47 @@
+.tabsContainer {
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  height: fit-content;
+  width: fit-content;
+  border-radius: 30px;
+  border: 1px solid rgb(3, 37, 65);
+}
+
+.tab {
+  flex: 1;
+  padding: 2px 20px;
+  font-size: 16px;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  width: fit-content;
+  white-space: nowrap;
+  background-color: transparent;
+  z-index: 1;
+  font-family: inherit;
+  font-weight: 500;
+}
+
+.active {
+  background: linear-gradient(to right, #c0fecf 0, #1ed5a9 100%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 600;
+}
+
+.slider {
+  position: absolute;
+  width: 80px;
+  bottom: 0;
+  border-radius: 30px;
+  left: -1px;
+  height: 100%;
+  background-color: rgb(
+    3,
+    37,
+    65
+  ); /* Set the background color to match the tab color */
+  transition: transform 0.3s ease-out; /* Updated transition property */
+}
