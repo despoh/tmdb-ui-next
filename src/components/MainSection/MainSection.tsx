@@ -53,7 +53,7 @@ const MainSection = ({ data }: MainSectionProps) => {
         <FactItem
           label="Network"
           value={
-            isMovie ? undefined : (
+            (isMovie || (data as TvDetail).networkLogos?.length === 0) ? undefined : (
               <img
                 src={`https://image.tmdb.org/t/p/w500/${(data as TvDetail).networkLogos}`}
               />
