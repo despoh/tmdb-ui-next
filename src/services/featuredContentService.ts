@@ -1,5 +1,6 @@
 import { PopularMediaQuery, TrendingMediaQuery } from "@/__generated__/graphql";
 import { popularMediaQuery, trendingMediaQuery } from "@/graphql/queries";
+import { getApiBaseUrl } from "@/utils/general";
 import { request } from "graphql-request";
 
 export const getTrendingMedia = async (timeWindow: String) => {
@@ -8,7 +9,7 @@ export const getTrendingMedia = async (timeWindow: String) => {
   };
 
   const data = await request<TrendingMediaQuery>(
-    "https://tmdb.despoh.com/api",
+    getApiBaseUrl(),
     trendingMediaQuery,
     variable,
   );
@@ -21,7 +22,7 @@ export const getPopularMedia = async (type: String) => {
   };
 
   const data = await request<PopularMediaQuery>(
-    "https://tmdb.despoh.com/api",
+    getApiBaseUrl(),
     popularMediaQuery,
     variable,
   );

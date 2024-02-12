@@ -1,5 +1,6 @@
 import { MovieDetailQuery, TvDetailQuery } from "@/__generated__/graphql";
 import { movieDetailQuery, tvDetailQuery } from "@/graphql/queries";
+import { getApiBaseUrl } from "@/utils/general";
 import { request } from "graphql-request";
 
 export const getMovieDetail = async (id: number) => {
@@ -8,7 +9,7 @@ export const getMovieDetail = async (id: number) => {
   };
 
   const data = await request<MovieDetailQuery>(
-    "https://tmdb.despoh.com/api",
+    getApiBaseUrl(),
     movieDetailQuery,
     variable,
   );
@@ -21,7 +22,7 @@ export const getTvDetail = async (id: number) => {
   };
 
   const data = await request<TvDetailQuery>(
-    "https://tmdb.despoh.com/api",
+    getApiBaseUrl(),
     tvDetailQuery,
     variable,
   );

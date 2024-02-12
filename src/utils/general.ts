@@ -28,3 +28,11 @@ export const formatTime = (totalMinutes: number) => {
   const minutes = totalMinutes % 60;
   return `${hours > 0 ? `${hours}h` : ""}${minutes > 0 ? ` ${minutes}m` : ""}`;
 };
+
+export const getApiBaseUrl = () => {
+  if(process.env.NODE_ENV === "development"){
+    "http://localhost:4000";
+  }
+
+  return "https://tmdb.despoh.com/api";
+}

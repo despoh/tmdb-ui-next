@@ -1,6 +1,7 @@
 import { request } from "graphql-request";
 import { searchQuery } from "@/graphql/queries";
 import { SearchQuery } from "@/__generated__/graphql";
+import { getApiBaseUrl } from "@/utils/general";
 
 export const searchMovie = async (keyword: string, pageNumber: number) => {
   const variable = {
@@ -10,7 +11,7 @@ export const searchMovie = async (keyword: string, pageNumber: number) => {
   };
 
   const data = await request<SearchQuery>(
-    "https://tmdb.despoh.com/api",
+    getApiBaseUrl(),
     searchQuery,
     variable,
   );
@@ -25,7 +26,7 @@ export const searchTV = async (keyword: string, pageNumber: number) => {
   };
 
   const data = await request<SearchQuery>(
-    "https://tmdb.despoh.com/api",
+    getApiBaseUrl(),
     searchQuery,
     variable,
   );
