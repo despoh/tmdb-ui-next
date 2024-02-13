@@ -36,7 +36,7 @@ const Header = ({ data }: HeaderProps) => {
           <div className={styles.infoContainer}>
             <h2 className={styles.title}>
               <span>{data.title}</span>
-              <span className={styles.releaseYear}>{releaseYear}</span>
+              <span className={styles.releaseYear}>{`(${releaseYear})`}</span>
             </h2>
             <div className={styles.facts}>
               {isMovie && data.releaseDate && <span>{data.releaseDate}</span>}
