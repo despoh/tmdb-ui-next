@@ -70,7 +70,7 @@ const MainSection = ({ data }: MainSectionProps) => {
         />
         <FactItem
           label="Revenue"
-          value={formatCurrency(Number((data as MovieDetail).budget))}
+          value={formatCurrency(Number((data as MovieDetail).revenue))}
         />
         <FactItem label="Type" value={(data as TvDetail).type} />
         <section className={styles.rightColumnItem}>
